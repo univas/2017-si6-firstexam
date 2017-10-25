@@ -12,9 +12,9 @@ for (var i = 0; i < students.length; i++) {
         }
         if (media/4 >= 60) {
             situacao = "Aprovado"
-        }else if(media >= 50 || media < 60){
+        }if(media >= 50 || media < 60){
             situacao = "Final"
-        }else{
+        }else if(media > 50 ){
             situacao = "Reprovado"
         }
     console.log("Nome: " + student.name)
