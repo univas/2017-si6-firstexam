@@ -10,7 +10,6 @@ for (var i = 0; i < students.length; i++) {
             var aux = student.grades[z];
             media+=aux
         }
-        console.log(media.toFixed(2)/4)
         if (media/4 >= 60) {
             situacao = "Aprovado"
         }else if(media >= 50 || media < 60){
