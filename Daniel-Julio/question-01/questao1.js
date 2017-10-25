@@ -2,14 +2,20 @@ const pokemons = require('./pokeDB.json')
 
 const pokemonNum = process.argv[2] //DIGITA Numero
 
-function findPokemonNumber(pokemonNum){ //função pura
-    console.log("Student ID: " + studentId) //executa 1x
-    return function callback(student,index){ 
-        //console.log('received Ids ' + student.id) //executa nx
-        return studentId == student.id
+function findPokemonNumber(pokemonNum){ 
+    console.log("Pokemon Number: " + pokemonNum) 
+    return function callback(pokemon){ 
+        
+        return pokemonNum == pokemon.id
     }
 }
 
-const student = students.find(findStudentById(studentId)) //find(encontra um item de cada vez)
-let output = student ? student.name : 'Student not found'
-console.log(output)
+const pokemon = pokemons.find(findPokemonNumber(pokemonNum))
+
+if(pokemon){
+    console.log(pokemon.name)
+    console.log(pokemon.type)
+}
+else{
+    console.log('Pokemon not found')
+}
