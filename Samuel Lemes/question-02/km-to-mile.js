@@ -5,4 +5,3 @@ let km = process.argv[2]
 let kmMile = km * (mile)
 
 console.log(kmMile.toFixed(2))
-
