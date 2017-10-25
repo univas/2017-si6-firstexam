@@ -5,6 +5,7 @@ var situacao
 for (var i = 0; i < students.length; i++) {
     var student = students[i];
     if (x==student.id) {
+        console.log("parou aki!")
         var media = 0
         for (var z = 0; z < student.grades.length; z++) {
             var aux = student.grades[z];
@@ -12,9 +13,9 @@ for (var i = 0; i < students.length; i++) {
         }
         if (media/4 >= 60) {
             situacao = "Aprovado"
-        }if(media/4 >= 50 && media/4 < 60){
+        }else if(media/4 >= 50 && media/4 < 60){
             situacao = "Final"
-        }else if(media/4 <50){
+        }else{
             situacao = "Reprovado"
         }
     console.log("Nome: " + student.name)
