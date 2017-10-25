@@ -3,8 +3,7 @@ const pokes = require('./pokeDB.json')
 let pokeId = process.argv[2]
 
 function printPoke (poke) {
-    console.log("Name: " + poke.name)
-    console.log("Type: "+ poke.type)
+    console.log("Name: " + poke.name + "\nType: "+ poke.type)
 }
 
 function findPokeById (poke) {
@@ -16,5 +15,3 @@ function findPokeById (poke) {
 const poke = pokes.find(findPokeById(pokeId))
 
 poke ? printPoke(poke) : console.log('poke not found')
-
-
